@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class MultiplyServlet extends HttpServlet {
 
-    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 
         int square = 1;
         int j = 0;

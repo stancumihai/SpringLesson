@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form action="add" method="get">
+<form action="home" method="get">
     Enter 1'st number :
     <input type="text" name="num1"/><br>
     Enter 2'nd number :
