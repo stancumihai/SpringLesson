@@ -1,26 +1,19 @@
 package ro.stancumihai;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class AddServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         int i = Integer.parseInt(req.getParameter("num1"));
         int j = Integer.parseInt(req.getParameter("num2"));
 
         int k = i + j;
-
-//        Session Management
-//        PrintWriter out = res.getWriter();
-//        out.println(k + "from AddServlet");
-        req.setAttribute("k", k);
-        RequestDispatcher rd = req.getRequestDispatcher("/square");
-        rd.forward(req, res);
+        Cookie cookie = new Cookie("k", String.valueOf(k));
+        res.addCookie(cookie);
+        Cookie cookie1 = new Cookie("j", String.valueOf(j));
+        res.addCookie(cookie1);
+        res.sendRedirect("square");  //URL Redirecting
     }
 }
