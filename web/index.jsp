@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form action="add" method="get">
-    Enter 1'st number :
-    <input type="text" name="num1"/><br>
-    Enter 2'nd number :
-    <input type="text" name="num2"/><br>
-    Submit <input type="submit"/>
+<form action="addAlien" method="get">
+    Id: <input type = "text" name = "id"><br>
+    Name: <input type = "text" name = "name"><br>
+    Submit: <input type = "submit"><br>
 </form>
 </body>
 </html>
