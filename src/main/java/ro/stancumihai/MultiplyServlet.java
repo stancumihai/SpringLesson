@@ -1,8 +1,10 @@
 package ro.stancumihai;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
+@WebServlet("/multiply")
 public class MultiplyServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
